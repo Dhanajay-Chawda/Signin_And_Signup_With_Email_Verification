@@ -3,6 +3,7 @@ package com.example.login_singup
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import com.example.login_singup.databinding.ActivitySigninBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -55,6 +56,16 @@ class SigninActivity : AppCompatActivity() {
 
             }
         }
+
+        val myTextView = findViewById<TextView>(R.id.textView2)
+        myTextView.setOnClickListener {
+            // Create the intent to open the next activity
+            val intent = Intent(this,forgot_password ::class.java)
+
+            // Start the next activity
+            startActivity(intent)
+        }
+
     }
 
 
@@ -66,5 +77,7 @@ class SigninActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+
 
  }
