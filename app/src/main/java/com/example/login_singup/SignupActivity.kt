@@ -3,6 +3,8 @@ package com.example.login_singup
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import com.example.login_singup.databinding.ActivitySignupBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -64,6 +66,15 @@ class SignupActivity : AppCompatActivity() {
 
         }
 
+
+        val signin = findViewById<TextView>(R.id.textView)
+        signin.setOnClickListener {
+            // Create the intent to open the next activity
+            val intent = Intent(this,SigninActivity::class.java)
+
+            // Start the next activity
+            startActivity(intent)
+        }
 
 
 
