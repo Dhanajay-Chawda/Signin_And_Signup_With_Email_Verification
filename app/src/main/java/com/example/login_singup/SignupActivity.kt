@@ -73,7 +73,7 @@ class SignupActivity : AppCompatActivity() {
 
 
 
-        val signin = findViewById<TextView>(R.id.textView)
+        val signin = findViewById<TextView>(R.id.textView69)
         signin.setOnClickListener {
             // Create the intent to open the next activity
             val intent = Intent(this,SigninActivity::class.java)

@@ -29,8 +29,17 @@ class SigninActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
 
-        binding.textView.setOnClickListener {
-            val intent = Intent(this, SignupActivity::class.java)
+//        binding.textView.setOnClickListener {
+//            val intent = Intent(this, SignupActivity::class.java)
+//            startActivity(intent)
+//        }
+
+        val myTextView2 = findViewById<TextView>(R.id.textView22)
+        myTextView2.setOnClickListener {
+            // Create the intent to open the next activity
+            val intent = Intent(this,SignupActivity ::class.java)
+
+            // Start the next activity
             startActivity(intent)
         }
 
